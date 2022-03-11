@@ -1,9 +1,16 @@
 
+// import'./style/GeneralStyle.css'
+
+import style from './style/HeaderComponent.module.css'
 
 function App() {
   return (
     <div>
-this is working
+
+    <div className={style.start}>
+    Hello World!
+  </div>
+
     </div>
   );
 }
