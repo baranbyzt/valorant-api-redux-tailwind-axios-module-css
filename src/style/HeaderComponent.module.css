@@ -8,7 +8,41 @@
 
 @layer components {
 
-    .start{
-        @apply  bg-red-300 mt-20 text-center;
+    .header_wrapper{
+        @apply  
+        bg-red-300 w-full h-24 flex
+        justify-center items-center
+        ;
+    }
+
+    .menu_ul{
+        @apply  w-full mx-10 px-10
+        flex  md:justify-between justify-center items-center
+        ;
+    }
+
+    .menu_inner_item_1{
+@apply flex justify-between;
+    }
+    .img{
+        @apply w-10 ml-3;
+    }
+    .menu_inner_item_2{
+@apply flex justify-between;
+    }
+
+    .menu_li{
+        @apply mx-3 cursor-pointer text-2xl hover:bg-slate-200 rounded-2xl;
     }
 }
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .menu_inner_item_1 {
+     display: none;
+    }
+  }
+
