@@ -1,13 +1,10 @@
 
-
-
 import React from "react";
+import AgentsComponent from "../components/AgentsComponent";
 
 const AgentsPage = () => {
     return ( 
-        <>
-        agenst section
-        </>
+    <AgentsComponent/>
     );
 }
  

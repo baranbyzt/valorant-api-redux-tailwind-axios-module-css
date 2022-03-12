@@ -2,13 +2,12 @@
 
 
 import React from 'react'
+import WeaponryComponent from '../components/WeaponryComponent'
 
 const WeaponryPage = () => {
     
     return(
-        <>
-        this is working wepons
-        </>
+      <WeaponryComponent/>
     )
 }
 

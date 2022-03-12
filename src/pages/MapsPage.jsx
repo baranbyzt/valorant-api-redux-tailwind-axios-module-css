@@ -1,13 +1,12 @@
 
 
 import React from "react";
+import MapComponent from '../components/MapComponent'
 
 const MapsPage = () => {
 
     return(
-<>
-this here maps page section
-</>
+<MapComponent/>
     )
 }
 
