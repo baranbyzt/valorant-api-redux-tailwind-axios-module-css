@@ -1,6 +1,4 @@
 
-
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import App from "../App";
@@ -17,16 +15,16 @@ const GetApi = () => {
     const getReduxDatas = useSelector(state => state.myCounter);
     const dispatch = useDispatch();
 
-    const [agents,setAgents] = useState(null)
-    const [maps,setMaps] = useState(null)
-    const [wepons,setWepons] = useState(null)
 
     const fecthAgents = () => {
       axios
         .get(
           ApiAgents
         )
-        .then((response) => setAgents(response.data))
+        .then((response) => dispatch({ 
+          type: 'AGENTS_ACTİON',
+          payload:response.data
+        }) )
         .catch((error) => console.log(error));
   
        
@@ -37,7 +35,11 @@ const GetApi = () => {
         .get(
           ApiMap
         )
-        .then((response) => setMaps(response.data))
+        .then((response) => 
+         dispatch({ 
+          type: 'MAPS_ACTİON',
+          payload:response.data
+        }))
         .catch((error) => console.log(error));
   
        
@@ -48,37 +50,27 @@ const GetApi = () => {
         .get(
           ApiWepons
         )
-        .then((response) => setWepons(response.data))
+        .then((response) =>  
+          dispatch({ 
+          type: 'WEPONS_ACTİON',
+          payload:response.data
+        }))
         .catch((error) => console.log(error));
   
         
     }
 
 
-        useEffect(() => {
+        useEffect( async() => {
           
-          fecthAgents()
-          fecthMaps()
-          fecthWepons()
+         await fecthAgents()
+         await fecthMaps()
+         await fecthWepons()
           
-           
-          dispatch({ 
-            type: 'MAPS_ACTİON',
-            payload:maps
-          }) 
-          dispatch({ 
-            type: 'AGENTS_ACTİON',
-            payload:agents
-          })
-       
-          dispatch({ 
-            type: 'WEPONS_ACTİON',
-            payload:wepons
-          })  
+  
             }, []);
 
-     
-            console.log(getReduxDatas)
+   
            
 
     return ( 
@@ -88,28 +80,11 @@ const GetApi = () => {
  
 export default GetApi;
 
+
 /*
- dispatch({ 
-              type: 'MAPS_ACTİON',
-              payload:maps
-            }) 
-            dispatch({ 
-              type: 'AGENTS_ACTİON',
-              payload:agents
-            })
-         
-            dispatch({ 
-              type: 'WEPONS_ACTİON',
-              payload:wepons
-            })
 
-
-
-
-
-             fecthAgents()
-            fecthMaps()
-            fecthWepons()
-
-            
+const [agents,setAgents] = useState(null)
+    const [maps,setMaps] = useState(null)
+    const [wepons,setWepons] = useState(null)
+    
 */
