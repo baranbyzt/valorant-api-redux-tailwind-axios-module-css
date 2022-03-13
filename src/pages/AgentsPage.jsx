@@ -8,18 +8,24 @@ const AgentsPage = () => {
     const getReduxDatas = useSelector(state => state.myCounter);
 const [ffdata,setFfdata] = useState(null)
 
+
+
     useEffect(() => {
-    
-     // setFfdata(getReduxDatas.redux_agents)
-      
+  setFfdata(getReduxDatas.redux_agents.data)
     }, []);
 
- // console.log(ffdata.data)
 
     return ( 
    <div className={style.pages_wrapper}>
 
-<AgentsComponent/>
+
+
+{ffdata
+        ? ffdata.map((news) => (
+            <AgentsComponent data={news} key={news.uuid} />
+          ))
+        : "Loading"}
+
 
    </div>
     );
@@ -30,20 +36,6 @@ export default AgentsPage;
 /*
 
 
-{
- ffdata.map((data,id) => (
-    <AgentsComponent data={data} id={id}/> 
-  ))
-}
-    
-
-
-
-{
-  getReduxDatas.redux_agents.data.map((data,id) => (
-    <AgentsComponent data={data} id={id}/> 
-  ))
-}
 
 
 */

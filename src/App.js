@@ -10,6 +10,7 @@ import AgentsPage from './pages/AgentsPage'
 import MapsPage from './pages/MapsPage'
 import WeaponryPage from './pages/WeaponryPage'
 import ErrorPage from './pages/ErrorPage'
+import OpeningPage from './pages/OpeningPage'
 
 // components
 import HeaderComponent from './components/HeaderComponent'
@@ -21,7 +22,7 @@ function App() {
 <Router>
 <HeaderComponent/>
   <Routes>
-  <Route  path='/' element={<WeaponryPage/>} />
+  <Route  path='/' element={<OpeningPage/>} />
   <Route  path='/weapons' element={<WeaponryPage/>} />
   <Route  path='/agents' element={<AgentsPage/>} />
   <Route  path='/maps' element={<MapsPage/>} />

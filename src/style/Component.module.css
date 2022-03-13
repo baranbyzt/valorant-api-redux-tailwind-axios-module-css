@@ -8,7 +8,31 @@
 @layer components {
 
     .card_wrapper{
-        @apply w-[320px] h-[400px] bg-red-700 rounded-md 
-        p-2 m-5;
+        @apply w-[320px] h-[500px] bg-white rounded-md 
+        p-2 m-5 mb-10 overflow-hidden relative;
+    }
+    .card_wrapper_weapon{
+        @apply w-[320px] h-[320px] bg-white rounded-md 
+        p-2 m-5 mb-10 overflow-hidden relative text-center;
+    }
+.card_wrappermap{
+    @apply w-[320px] h-[600px] bg-white rounded-md 
+    p-2 m-5 mb-10 overflow-hidden relative text-center;
+}
+    .agentsimg{
+        @apply   rounded-full w-60 mx-auto;
+    }
+    .agentsimgmap{
+        @apply    w-80 mx-auto ;
+    }
+    .agents_h1{
+        @apply text-center text-3xl bg-blue-100 p-2
+        mb-5;
+    }
+    .agents_p{
+        @apply absolute bottom-2 m-3;
+    }
+    .inner_div_component{
+        @apply mt-5;
     }
 }
