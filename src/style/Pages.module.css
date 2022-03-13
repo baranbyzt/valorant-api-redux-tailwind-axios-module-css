@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+
+
+@layer components {
+
+    .pages_wrapper{
+        @apply flex justify-center items-center
+        w-full bg-violet-800 h-[900px] p-10
+        flex-wrap;
+    }
+}

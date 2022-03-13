@@ -1,30 +1,26 @@
-import React,{useEffect} from "react";
-import { useSelector,useDispatch } from "react-redux";
+
+
+import React from "react";
+import style from '../style/Component.module.css'
 
 const AgentsComponent = () => {
-  
-    const getReduxDatas = useSelector(state => state.myCounter);
-    
-  useEffect(() => {
-    console.log(getReduxDatas.redux_agents)
-    console.log(getReduxDatas.redux_maps)
-    console.log(getReduxDatas.redux_wepons)
-  }, []);
 
     return ( 
-        <>
-        burası AgentsComponent
-        </>
+      <div className={style.card_wrapper}>
+        
+      <h1>Name</h1>
+<p>The bionic Swede Breach fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.</p>
+  
+      </div>
      );
 }
  
 export default AgentsComponent;
 
-
-
 /*
+     <h1>Name</h1>
+<p>The bionic Swede Breach fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.</p>
+  
 
-    const getReduxDatas = useSelector(state => state.myCounter);
-    console.log(getReduxDatas)
 
 */
