@@ -1,15 +1,17 @@
 
 
-import React from "react";
+import React,{useEffect} from "react";
 import style from '../style/Component.module.css'
 
-const AgentsComponent = () => {
+const AgentsComponent = (props) => {
+
 
     return ( 
       <div className={style.card_wrapper}>
-        
-      <h1>Name</h1>
-<p>The bionic Swede Breach fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.</p>
+
+      <h1 className={style.agents_h1}>{props.data.displayName}</h1>
+      <img className={style.agentsimg} src={props.data.displayIcon}/>
+<p className={style.agents_p}>{props.data.description}</p>
   
       </div>
      );
@@ -17,10 +19,3 @@ const AgentsComponent = () => {
  
 export default AgentsComponent;
 
-/*
-     <h1>Name</h1>
-<p>The bionic Swede Breach fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair.</p>
-  
-
-
-*/
