@@ -1,10 +1,13 @@
 
-
+import React from "react";
+import style from '../style/Component.module.css'
 
 const MapComponent = () => {
     return ( 
         <>
-        burası map component
+    <div className={style.card_wrapper}>
+burası map kısımı
+    </div>
         </>
      );
 }

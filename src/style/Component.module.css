@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+@layer components {
+
+    .card_wrapper{
+        @apply w-[320px] h-[400px] bg-red-700 rounded-md 
+        p-2 m-5;
+    }
+}
