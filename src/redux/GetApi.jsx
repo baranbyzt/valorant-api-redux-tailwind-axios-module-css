@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import App from "../App";
 
+// we use it to pull and list data
 import { useSelector,useDispatch } from "react-redux";
 
+// our APIs
 const ApiAgents = 'https://valorant-api.com/v1/agents/'
 const ApiMap = 'https://valorant-api.com/v1/maps'
 const ApiWepons = 'https://valorant-api.com/v1/weapons'
@@ -15,7 +17,7 @@ const GetApi = () => {
     const getReduxDatas = useSelector(state => state.myCounter);
     const dispatch = useDispatch();
 
-
+// we use it to pull data with axios
     const fecthAgents = () => {
       axios
         .get(
@@ -29,7 +31,7 @@ const GetApi = () => {
   
        
     }
-
+// we use it to pull data with axios
     const fecthMaps = () => {
       axios
         .get(
@@ -44,7 +46,7 @@ const GetApi = () => {
   
        
     }
-
+// we use it to pull data with axios
     const fecthWepons = () => {
       axios
         .get(
@@ -80,11 +82,3 @@ const GetApi = () => {
  
 export default GetApi;
 
-
-/*
-
-const [agents,setAgents] = useState(null)
-    const [maps,setMaps] = useState(null)
-    const [wepons,setWepons] = useState(null)
-    
-*/

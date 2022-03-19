@@ -1,5 +1,6 @@
 
 import React,{useEffect} from "react";
+// we are importing our Component.madule.css files
 import style from '../style/Component.module.css'
 
 const MapComponent = (props) => {

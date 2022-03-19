@@ -1,6 +1,4 @@
-""
-// import'./style/GeneralStyle.css'
-// import style from './style/HeaderComponent.module.css'
+
 
 import React from 'react'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'

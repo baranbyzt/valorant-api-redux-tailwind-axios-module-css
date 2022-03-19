@@ -1,10 +1,13 @@
 
 import React,{useEffect,useState} from "react";
 import { useSelector,useDispatch } from "react-redux";
+// our component
 import MapComponent from '../components/MapComponent'
+// our style file
 import style from '../style/Pages.module.css'
 
 const MapsPage = () => {
+   // It is used to use the data in the global store within the page.
     const getReduxDatas = useSelector(state => state.myCounter);
     const [ffdata,setFfdata] = useState(null)
     

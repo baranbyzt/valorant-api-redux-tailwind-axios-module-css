@@ -1,6 +1,9 @@
 
-let data= null;
+// our redux reducer
 
+
+let data= null;
+// our initState objec
 const initState = {
     redux_agents:data,
     redux_maps:data,

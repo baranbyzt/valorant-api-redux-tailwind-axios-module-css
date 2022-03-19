@@ -1,11 +1,10 @@
 
 
-import React,{useEffect} from "react";
+import React from "react";
+// style file
 import style from '../style/Component.module.css'
 
 const AgentsComponent = (props) => {
-
-
     return ( 
       <div className={style.card_wrapper}>
 
